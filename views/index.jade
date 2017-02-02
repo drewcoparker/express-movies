@@ -1,0 +1,13 @@
+extends layout
+
+block content
+  
+    - for (let movie of movies)
+        div.movie-wrapper
+            div.movie
+                h2= movie.title
+                p Released #{movie.release_date}
+                p= movie.overview
+            div.poster
+                img.image(src='https://image.tmdb.org/t/p/w370_and_h556_bestv2#{movie.poster_path}')
+    
